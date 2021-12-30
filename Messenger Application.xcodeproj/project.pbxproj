@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -133,7 +133,6 @@
 				E39BA87D011840ED217DD8AC /* Pods-Messenger Application.debug.xcconfig */,
 				D90820BD4A8E2D953D774F5B /* Pods-Messenger Application.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -155,6 +154,8 @@
 			dependencies = (
 			);
 			name = "Messenger Application";
+			packageProductDependencies = (
+			);
 			productName = "Messenger Application";
 			productReference = 11C0680C277DAD6C00689C9D /* Messenger Application.app */;
 			productType = "com.apple.product-type.application";
@@ -183,6 +184,8 @@
 				Base,
 			);
 			mainGroup = 11C06803277DAD6C00689C9D;
+			packageReferences = (
+			);
 			productRefGroup = 11C0680D277DAD6C00689C9D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";

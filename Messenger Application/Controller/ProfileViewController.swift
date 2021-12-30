@@ -9,11 +9,23 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
+    //MARK:- viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.prefersLargeTitles = true
+        title = "Profile"
+        checkIfLogin()
+    }
+    
+    //MARK:- checkIfLogin
+    func checkIfLogin(){
+        if (UserDefaults.standard.string(forKey: "email")) != nil && (UserDefaults.standard.string(forKey: "email")) != nil{
+        }else{
+        let profilImg = LoginViewController(nibName: "LoginViewController", bundle: nil)
+        navigationController?.popViewController(animated: true)
 
-        // Do any additional setup after loading the view.
+        navigationController?.pushViewController(profilImg, animated: true)
+        }
     }
 
 
