@@ -29,8 +29,8 @@ class LoginViewController: UIViewController {
     func viewContainerSetUp(){
         viewContainer.layer.cornerRadius = 15
         viewContainer.layer.shadowOpacity = 0.1
-        viewContainer.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
-        viewContainer.layer.shadowRadius = 1.0
+//        viewContainer.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
+        viewContainer.layer.shadowRadius = 10.0
         viewContainer.layer.shadowColor = UIColor.black.cgColor
         viewContainer.layer.masksToBounds = false
     }
