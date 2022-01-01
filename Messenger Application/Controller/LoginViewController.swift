@@ -33,20 +33,28 @@ class LoginViewController: UIViewController {
         viewContainer.layer.shadowColor = UIColor.black.cgColor
         viewContainer.layer.masksToBounds = false
     }
+    
+    
     //MARK:- signinAction
     @IBAction func signinAction(_ sender: UIButton) {
         guard let email = emailTF.text,!email.isEmpty,let password = passwordTF.text,!password.isEmpty else {return}
          UserDefaults.standard.set(email, forKey: "email")
          UserDefaults.standard.set(password, forKey: "password")
         // Firebase Login
-        FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password, completion: { authResult, error in
+        FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password, completion: { [weak self] authResult, error in
+            guard let strongSelf = self else {
+                return
+            }
             guard let result = authResult, error == nil else {
                 print("Failed to log in user with email \(email)")
                 return
             }
             let user = result.user
             print("logged in user: \(user)")
+            // if this succeeds, dismiss
+            strongSelf.navigationController?.dismiss(animated: true, completion: nil)
         })
+
     }
     
     }

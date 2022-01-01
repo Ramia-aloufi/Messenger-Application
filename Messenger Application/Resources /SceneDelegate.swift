@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let ws = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: ws)
 
-        window?.rootViewController = UINavigationController(rootViewController: LoginViewController(nibName: "LoginViewController", bundle: nil))
+        window?.rootViewController = UINavigationController(rootViewController: NewConversationViewController(nibName: "NewConversationViewController", bundle: nil))
             //LoginViewController(nibName: "LoginViewController", bundle: nil)
 
         window?.makeKeyAndVisible()
