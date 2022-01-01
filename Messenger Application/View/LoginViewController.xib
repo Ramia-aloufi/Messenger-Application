@@ -30,7 +30,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nUo-7h-YJs">
-                    <rect key="frame" x="38" y="119.5" width="303.5" height="558"/>
+                    <rect key="frame" x="38" y="186" width="303.5" height="558"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="3iC-mJ-UQu">
                             <rect key="frame" x="16" y="16" width="271.5" height="526"/>
@@ -117,7 +117,7 @@
                 <constraint firstItem="nUo-7h-YJs" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="53C-Gd-mIW"/>
                 <constraint firstItem="nUo-7h-YJs" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.8" id="6YF-lF-U9q"/>
                 <constraint firstItem="nUo-7h-YJs" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="FBT-V0-MpR"/>
-                <constraint firstItem="nUo-7h-YJs" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.7" id="JuM-vi-AZK"/>
+                <constraint firstItem="nUo-7h-YJs" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.6" id="JuM-vi-AZK"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="101"/>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
     //MARK:- IBOutlet
@@ -24,23 +25,28 @@ class LoginViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         title = "Sign in"
         }
-
     //MARK:- viewContainerSetUp
     func viewContainerSetUp(){
         viewContainer.layer.cornerRadius = 15
         viewContainer.layer.shadowOpacity = 0.1
-//        viewContainer.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
         viewContainer.layer.shadowRadius = 10.0
         viewContainer.layer.shadowColor = UIColor.black.cgColor
         viewContainer.layer.masksToBounds = false
     }
-    
-    
     //MARK:- signinAction
     @IBAction func signinAction(_ sender: UIButton) {
         guard let email = emailTF.text,!email.isEmpty,let password = passwordTF.text,!password.isEmpty else {return}
          UserDefaults.standard.set(email, forKey: "email")
          UserDefaults.standard.set(password, forKey: "password")
+        // Firebase Login
+        FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password, completion: { authResult, error in
+            guard let result = authResult, error == nil else {
+                print("Failed to log in user with email \(email)")
+                return
+            }
+            let user = result.user
+            print("logged in user: \(user)")
+        })
     }
     
     }
@@ -51,4 +57,5 @@ extension UIViewController {
         nibName: nibNamed,
         bundle: bundle
     ).instantiate(withOwner: nil, options: nil)[0] as? UIViewController
-    }}
+    }
+  }

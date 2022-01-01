@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class RegisterViewController: UIViewController {
     //MARK: - OUTLET
@@ -23,6 +24,10 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewContainerSetUp()
+        // Firebase Login / check to see if email is taken
+        // try to create an account
+
+
     }
     //MARK: - ACTION
     @IBAction func addProfileImg(_ sender: UIButton) {
@@ -33,6 +38,14 @@ class RegisterViewController: UIViewController {
            let lastName = lastNameTF.text,!lastName.isEmpty,
            let email = emailTF.text,!email.isEmpty,
            let password = passwordTF.text,!password.isEmpty{
+            FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: { authResult , error  in
+                guard let result = authResult, error == nil else {
+                    print("Error creating user")
+                    return
+                }
+                let user = result.user
+                print("Created User: \(user)")
+            })
         }else{
             print("some empty")
         }
