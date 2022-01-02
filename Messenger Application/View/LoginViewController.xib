@@ -30,29 +30,29 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nUo-7h-YJs">
-                    <rect key="frame" x="38" y="186" width="303.5" height="558"/>
+                    <rect key="frame" x="41.5" y="179" width="331" height="538"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="3iC-mJ-UQu">
-                            <rect key="frame" x="16" y="16" width="271.5" height="526"/>
+                            <rect key="frame" x="16" y="16" width="290.5" height="514"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0tJ-UJ-Qd6">
-                                    <rect key="frame" x="0.0" y="0.0" width="271.5" height="52"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="290.5" height="50.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1WM-fh-xkw">
-                                    <rect key="frame" x="0.0" y="68" width="271.5" height="51.5"/>
+                                    <rect key="frame" x="0.0" y="66.5" width="290.5" height="50"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYH-43-5nH">
-                                    <rect key="frame" x="0.0" y="135.5" width="271.5" height="52"/>
+                                    <rect key="frame" x="0.0" y="132.5" width="290.5" height="50.5"/>
                                     <state key="normal" title="Remember me" image="checkmark.rectangle" catalog="system">
                                         <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIC-A1-ARO">
-                                    <rect key="frame" x="0.0" y="203.5" width="271.5" height="51.5"/>
+                                    <rect key="frame" x="0.0" y="199" width="290.5" height="50"/>
                                     <color key="backgroundColor" red="0.75355613231658936" green="0.84219753742218018" blue="0.93834155797958374" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <state key="normal" title="Sign In">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -62,34 +62,37 @@
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forget Password?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGh-ry-6Ge">
-                                    <rect key="frame" x="0.0" y="271" width="271.5" height="52"/>
+                                    <rect key="frame" x="0.0" y="265" width="290.5" height="50.5"/>
                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--------------- or ----------------" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2o-8x-o46">
-                                    <rect key="frame" x="0.0" y="339" width="271.5" height="51.5"/>
+                                    <rect key="frame" x="0.0" y="331.5" width="290.5" height="50"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="right" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFw-g7-mIl">
-                                    <rect key="frame" x="0.0" y="406.5" width="271.5" height="52"/>
+                                    <rect key="frame" x="0.0" y="397.5" width="290.5" height="50"/>
                                     <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="fontDescription" name="FontAwesome5Brands-Regular" family="Font Awesome 5 Brands" pointSize="17"/>
                                     <state key="normal" title="Continue with Facebook"/>
+                                    <connections>
+                                        <action selector="faceBookLogin:" destination="-1" eventType="touchUpInside" id="kYl-Ic-LGk"/>
+                                    </connections>
                                 </button>
                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cId-1L-JZd">
-                                    <rect key="frame" x="0.0" y="474.5" width="271.5" height="51.5"/>
+                                    <rect key="frame" x="0.0" y="463.5" width="290.5" height="50.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Don’t have an account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bD5-rN-t4V">
-                                            <rect key="frame" x="0.0" y="0.0" width="193.5" height="51.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="212.5" height="50.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SignUp     " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glX-1b-sne">
-                                            <rect key="frame" x="193.5" y="0.0" width="78" height="51.5"/>
+                                            <rect key="frame" x="212.5" y="0.0" width="78" height="50.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>

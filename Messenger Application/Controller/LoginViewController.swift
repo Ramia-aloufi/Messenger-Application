@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FBSDKLoginKit
 
 class LoginViewController: UIViewController {
     //MARK:- IBOutlet
@@ -24,7 +25,18 @@ class LoginViewController: UIViewController {
         viewContainerSetUp()
         navigationController?.navigationBar.prefersLargeTitles = true
         title = "Sign in"
+        if let token = AccessToken.current, !token.isExpired {
+            // User is logged in, do work such as go to next view controller. }
+            
         }
+        }
+
+    // Swift // // Extend the code sample from 6a. Add Facebook Login to Your Code // Add to your viewDidLoad method:
+
+    // Swift override func viewDidLoad() { super.viewDidLoad() if let token = AccessToken.current, !token.isExpired { // User is logged in, do work such as go to next view controller. } }
+        
+    @IBAction func faceBookLogin(_ sender: UIButton) {
+    }
     //MARK:- viewContainerSetUp
     func viewContainerSetUp(){
         viewContainer.layer.cornerRadius = 15
@@ -32,6 +44,11 @@ class LoginViewController: UIViewController {
         viewContainer.layer.shadowRadius = 10.0
         viewContainer.layer.shadowColor = UIColor.black.cgColor
         viewContainer.layer.masksToBounds = false
+        
+        let loginButton = FBLoginButton()
+        stackContainer.addArrangedSubview(loginButton)
+      //  view.addSubview(loginButton)
+        loginButton.permissions = ["public_profile", "email"]
     }
     
     
@@ -56,6 +73,9 @@ class LoginViewController: UIViewController {
         })
 
     }
+    
+
+    
     
     }
 //MARK:- extension

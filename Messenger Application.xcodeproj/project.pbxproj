@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1188C45F2782113100E6D5A4 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1188C45D2782113100E6D5A4 /* ChatViewController.swift */; };
+		1188C4602782113100E6D5A4 /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1188C45E2782113100E6D5A4 /* ChatViewController.xib */; };
 		119DF7B5277FF84000A8657A /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119DF7B4277FF84000A8657A /* DatabaseManager.swift */; };
 		119DF7B7278007BF00A8657A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 119DF7B6278007BF00A8657A /* GoogleService-Info.plist */; };
 		11C06810277DAD6C00689C9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C0680F277DAD6C00689C9D /* AppDelegate.swift */; };
@@ -26,6 +28,8 @@
 
 /* Begin PBXFileReference section */
 		00E1D16D480C9DFD14274D53 /* Pods_Messenger_Application.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Messenger_Application.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1188C45D2782113100E6D5A4 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		1188C45E2782113100E6D5A4 /* ChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
 		119DF7B4277FF84000A8657A /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		119DF7B6278007BF00A8657A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		11C0680C277DAD6C00689C9D /* Messenger Application.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Messenger Application.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +100,7 @@
 				11C0682E277DBAD400689C9D /* NewConversationViewController.swift */,
 				11C06832277DBAF500689C9D /* ProfileViewController.swift */,
 				119DF7B4277FF84000A8657A /* DatabaseManager.swift */,
+				1188C45D2782113100E6D5A4 /* ChatViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -103,6 +108,7 @@
 		11C06824277DADF200689C9D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1188C45E2782113100E6D5A4 /* ChatViewController.xib */,
 				11C06827277DAEC000689C9D /* LoginViewController.xib */,
 				11C0682B277DBA9A00689C9D /* RegisterViewController.xib */,
 				11C0682F277DBAD400689C9D /* NewConversationViewController.xib */,
@@ -147,6 +153,7 @@
 			buildConfigurationList = 11C06820277DAD6E00689C9D /* Build configuration list for PBXNativeTarget "Messenger Application" */;
 			buildPhases = (
 				07BDB5C0629E666E9C69418D /* [CP] Check Pods Manifest.lock */,
+				C7F124E8695AC7834E54C25E /* [CP] Prepare Artifacts */,
 				11C06808277DAD6C00689C9D /* Sources */,
 				11C06809277DAD6C00689C9D /* Frameworks */,
 				11C0680A277DAD6C00689C9D /* Resources */,
@@ -157,8 +164,6 @@
 			dependencies = (
 			);
 			name = "Messenger Application";
-			packageProductDependencies = (
-			);
 			productName = "Messenger Application";
 			productReference = 11C0680C277DAD6C00689C9D /* Messenger Application.app */;
 			productType = "com.apple.product-type.application";
@@ -187,8 +192,6 @@
 				Base,
 			);
 			mainGroup = 11C06803277DAD6C00689C9D;
-			packageReferences = (
-			);
 			productRefGroup = 11C0680D277DAD6C00689C9D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -209,6 +212,7 @@
 				11C06819277DAD6E00689C9D /* Assets.xcassets in Resources */,
 				11C0682D277DBA9A00689C9D /* RegisterViewController.xib in Resources */,
 				11C06831277DBAD400689C9D /* NewConversationViewController.xib in Resources */,
+				1188C4602782113100E6D5A4 /* ChatViewController.xib in Resources */,
 				119DF7B7278007BF00A8657A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +259,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Messenger Application/Pods-Messenger Application-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C7F124E8695AC7834E54C25E /* [CP] Prepare Artifacts */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Messenger Application/Pods-Messenger Application-artifacts-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Prepare Artifacts";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Messenger Application/Pods-Messenger Application-artifacts-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Messenger Application/Pods-Messenger Application-artifacts.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -264,6 +285,7 @@
 			files = (
 				11C06834277DBAF500689C9D /* ProfileViewController.swift in Sources */,
 				11C06828277DAEC000689C9D /* LoginViewController.swift in Sources */,
+				1188C45F2782113100E6D5A4 /* ChatViewController.swift in Sources */,
 				11C0682C277DBA9A00689C9D /* RegisterViewController.swift in Sources */,
 				11C06810277DAD6C00689C9D /* AppDelegate.swift in Sources */,
 				11C06830277DBAD400689C9D /* NewConversationViewController.swift in Sources */,

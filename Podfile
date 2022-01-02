@@ -9,5 +9,7 @@ target 'Messenger Application' do
 pod 'Firebase/Auth'	
 pod 'Firebase/Storage'	
 pod 'Firebase/Messaging'	
-pod 'Firebase/Database'	
+pod 'Firebase/Database'
+pod 'FBSDKLoginKit'
+
 end

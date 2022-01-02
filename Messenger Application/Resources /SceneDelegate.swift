@@ -8,18 +8,57 @@
 
 import UIKit
 import Firebase
+import FBSDKCoreKit
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        guard let url = URLContexts.first?.url else {
+            return
+        }
+
+        ApplicationDelegate.shared.application(
+            UIApplication.shared,
+            open: url,
+            sourceApplication: nil,
+            annotation: [UIApplication.OpenURLOptionsKey.annotation]
+        )
+    }
+
+        
 
     var window: UIWindow?
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         FirebaseApp.configure()
+                guard let ws = (scene as? UIWindowScene) else { return }
+                window = UIWindow(windowScene: ws)
+//        if let tabBarController = window?.rootViewController as? UITabBarController {
+//            print("I passed here in willConnectTo")
+//        guard let ws = (scene as? UIWindowScene) else { return }
+//        window = UIWindow(windowScene: ws)
+//        let vc = UINavigationController(rootViewController: ProfileViewController(nibName: "ProfileViewController", bundle: nil))
+//        vc.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 1)
+//            tabBarController.viewControllers?.append(vc)
+//        }
+                let ProfileVC = UINavigationController(rootViewController: ProfileViewController(nibName: "ProfileViewController", bundle: nil))
+        let ChatVC = UINavigationController(rootViewController: ChatViewController(nibName: "ChatViewController", bundle: nil))
+        let tabBar = UITabBarController()
+        
+        ProfileVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "person.crop.rectangle", withConfiguration: UIImage.SymbolConfiguration(weight: .heavy)), tag: 0)
+        ChatVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "bubble.right", withConfiguration: UIImage.SymbolConfiguration(weight: .heavy)), tag: 1)
+        tabBar.setViewControllers([ProfileVC, ChatVC], animated: false)
+        window?.rootViewController = tabBar
 
-        guard let ws = (scene as? UIWindowScene) else { return }
-        window = UIWindow(windowScene: ws)
 
-        window?.rootViewController = UINavigationController(rootViewController: NewConversationViewController(nibName: "NewConversationViewController", bundle: nil))
+
+
+
+        
+     //   window?.rootViewController = UITabBarItem(
+        
+            //UINavigationController(rootViewController: NewConversationViewController(nibName: "NewConversationViewController", bundle: nil))
             //LoginViewController(nibName: "LoginViewController", bundle: nil)
 
         window?.makeKeyAndVisible()
